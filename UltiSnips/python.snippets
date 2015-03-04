@@ -1,6 +1,6 @@
 # Collection of Python snippets
 
-snippet readfile "Read all lines from a file" b
+snippet filereadlines "Read all lines from a file" b
 def read_file(${1:filename}):
 	return map(lambda x: x.strip(), open($1).readlines())
 endsnippet
