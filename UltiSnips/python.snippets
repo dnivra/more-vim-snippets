@@ -2,5 +2,11 @@
 
 snippet filereadlines "Read all lines from a file" b
 def read_file(${1:filename}):
+	"""
+	Return a list of lines in filename
+	"""
+
 	return map(lambda x: x.strip(), open($1).readlines())
+
+
 endsnippet
