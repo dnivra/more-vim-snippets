@@ -1,7 +1,7 @@
 # Collection of Python snippets
 
 snippet filereadlines "Read all lines from a file" b
-def read_file(${1:filename}):
+def read_lines_in_file(${1:filename}):
 	"""
 	Return a list of lines in filename
 	"""
@@ -9,4 +9,19 @@ def read_file(${1:filename}):
 	return map(lambda x: x.strip(), open($1).readlines())
 
 
+endsnippet
+
+snippet fileread "Read contents of a file as a single string" b
+def read_contents_of_file(filename):
+	"""
+	Read contents of a file as a single string
+	"""
+
+	return open(filename).read()
+
+
+endsnippet
+
+snippet getfiledir "Get directory of current file" w
+os.path.dirname(os.path.realpath(__file__))
 endsnippet
