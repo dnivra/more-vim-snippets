@@ -1,17 +1,25 @@
 # Collection of Python snippets
 
-snippet filereadlines "Read all lines from a file" b
-def read_lines_in_file(${1:filename}):
+snippet filereadlines "Read all lines from a file" w
+map(lambda x: x.strip(), open($1).readlines())
+endsnippet
+
+snippet filereadlinesfunction "Function that reads all lines from a file" b
+def read_lines_in_file(filename):
 	"""
 	Return a list of lines in filename
 	"""
 
-	return map(lambda x: x.strip(), open($1).readlines())
+	return map(lambda x: x.strip(), open(filename).readlines())
 
 
 endsnippet
 
-snippet fileread "Read contents of a file as a single string" b
+snippet fileread "Read contents of a file as a string" w
+open($1).read()
+endsnippet
+
+snippet filereadfunction "Function that read contents of a file as a string" b
 def read_contents_of_file(filename):
 	"""
 	Read contents of a file as a single string
